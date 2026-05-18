@@ -1,38 +1,22 @@
-<html>
-  <head>
-    <script src="https://aframe.io/releases/1.7.1/aframe.min.js"></script>
-  </head>
-  <body>
-    <a-scene>
-      <a-assets>
-        <a-asset-item id="box1" src="box1.glb"></a-asset-item>
-        <a-asset-item id="m0" src="m0.glb"></a-asset-item>
-      </a-assets>
-      <a-gltf-model
-        position="0 0 -4"
-        scale="0.5 0.5 0.5"
-        src="#m0"
-      ></a-gltf-model>
-      <a-gltf-model
-        position="0 0 -5"
-        scale="1 1 1"
-        rotation="0 45 0"
-        src="#box1"
-      ></a-gltf-model>
-      <a-box
-        position="0 1 -6"
-        rotation="0 0 0"
-        scale="4 2 0.1"
-        color="#000099"
-      ></a-box>
-      <a-plane
-        position="0 0 -4"
-        rotation="-90 0 0"
-        width="4"
-        height="4"
-        color="#7BC8A4"
-      ></a-plane>
-      <a-sky color="#888888"></a-sky>
-    </a-scene>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Home - Two Models</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<script src="https://aframe.io/releases/1.7.0/aframe.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image-aframe.prod.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/aframe-extras@7.2.0/dist/aframe-extras.min.js"></script> 
+</head>
+<body>
+  <a-scene mindar-image="imageTargetSrc:./tar1.mind;" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false"> 
+  <a-assets>
+  <a-asset-item id="m0" src="m0.glb"></a-asset-item>
+  </a-assets>
+  <a-camera position="0 0 0" look-controls="enabled: false"></a-camera> 
+  <a-entity mindar-image-target="targetIndex: 0">
+  <a-gltf-model rotation="0 0 0" position="0 -1 0.5" scale="0.5 0.5 0.5" src="#m0"></a-gltf-model>
+  </a-entity> 
+  </a-scene> 
   </body>
-</html>
+  </html>
+  
