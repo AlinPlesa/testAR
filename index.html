@@ -4,10 +4,20 @@
   </head>
   <body>
     <a-scene>
+      <a-assets>
+        <a-asset-item id="box1" src="box1.glb"></a-asset-item>
+        <a-asset-item id="m0" src="m0.glb"></a-asset-item>
+      </a-assets>
       <a-gltf-model
         position="0 0 -4"
         scale="0.5 0.5 0.5"
-        src="m0.glb"
+        src="#m0"
+      ></a-gltf-model>
+      <a-gltf-model
+        position="0 0 -5"
+        scale="1 1 1"
+        rotation="0 45 0"
+        src="#box1"
       ></a-gltf-model>
       <a-box
         position="0 1 -6"
